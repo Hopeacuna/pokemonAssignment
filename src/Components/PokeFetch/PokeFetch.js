@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './PokeFetch.css';
+import {tenSecCount} from '../Timer';
 
 
 class PokeFetch extends Component {
@@ -32,7 +33,7 @@ class PokeFetch extends Component {
   render() {
     return (
       <div className={'wrapper'}>
-        <button className={'start'} onClick={() => this.fetchPokemon()}>Start!</button>
+        <button className={'start'} onClick={() => this.fetchPokemon(), tenSecCount()}>Start!</button>
         <h1 className={'timer'} >Timer Display</h1>
         <div className={'pokeWrap'}>
           <img className={'pokeImg'} src={this.state.pokeSprite} />
